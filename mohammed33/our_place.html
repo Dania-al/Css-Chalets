@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Pacifico&family=Satisfy&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+
+
+<style>
+
+
+body{
+     font-family: 'Montserrat', sans-serif;
+     margin: 0px;
+     padding: 0px;
+}
+
+.main_box{
+ gap: 200px;  
+}
+
+.nav1{
+    margin-top: 25px;
+}
+
+.nav1 > a{
+    padding: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+.bt1{
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: 100px;
+     cursor: pointer;
+     margin-top: 9px;
+     margin-left: -20px;
+     border: none;
+}
+
+.box1{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.mlimg{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    column-gap: 15px;
+    row-gap: 15px;
+    margin-top: 150px;
+}
+
+.mlimgg{
+    width: 250px;
+    height: 250px;
+}
+
+.up-serveices{
+        display: flex;
+        justify-content: center;
+        padding: 70px;
+        gap: 50px;
+        background-color: #1F231C;
+        color: white;
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+
+    .mvid{
+        display: flex;
+        justify-content: center;
+        
+    }
+
+.divvt2{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.icon{
+   margin-top: 50px;
+}
+
+
+  .divvt > p{
+margin-top: 40px;
+margin-bottom: 40px;
+}
+
+.offer-container {
+    background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 300px;
+      padding: 0 20px;
+      margin-top: 150px;
+    }
+
+    .top-text {
+      font-family: 'Segoe Script', cursive;
+      font-size: 24px;
+      margin-bottom: 15px;
+      color:black;
+    }
+
+    .main-heading {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: black;
+    }
+
+    .description {
+      max-width: 600px;
+      font-size: 13px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+      color: black;
+    }
+
+    .button {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      font-size: 11px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .button:hover {
+      opacity: 0.8;
+    }
+
+.footer {
+  background-color: #121511;
+  color: #d2d2d2;
+  padding: 40px 20px 10px;
+  font-size: 14px;
+}
+
+.footer .container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.footer h1 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 50px;
+  margin-right: 370px;
+  font-size: 40px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-column h3 {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.footer-column a {
+  display: block;
+  color: #d2d2d2;
+  text-decoration: none;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid #2c2c2c;
+  margin-top: 20px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.footer-bottom .left,
+.footer-bottom .right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-bottom .left a {
+  margin-right: 15px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer-bottom .left i {
+  margin: 0 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.footer-bottom .right span {
+  margin-right: 15px;
+}
+
+.footer-bottom .right img {
+  height: 20px;
+  margin-left: 10px;
+  filter: grayscale(100%) brightness(200%);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin: 10px 0;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+
+
+</style>
+
+
+
+
+</head>
+
+
+
+<body>
+    
+   
+<div class="main_box" style="display: flex;">
+<p style="font-size: 20px; font-weight: bolder; margin-left: 250px;">LOGOTYPE</p>
+
+<nav class="nav1">
+   <a href="Home_page.html">Home</a>
+    <a href="Chalets.html">Pages</a>
+    <a href="why_us.html">Futures</a>
+    <a href="Our_blog.html">Blog</a>
+</nav>
+
+<button class="bt1">Book now</button>
+
+
+
+</div>
+
+
+
+<div class="box1">
+
+
+   <div class="our" style="width: 50%;height: 382px; background-color: #1F231C;color: white;">
+<h1 style="margin-top: 120px;font-size: 40px;margin-left: 250px;">Our place</h1>
+<p style="margin-left: 250px;"><small>Leave the city behind to explore the great outdoors at<br> our Outposts in the town of Catskill, New York.</small></p>
+   </div>
+
+   <div class="b1im">
+<img src="ourimm.png" alt="" width="780px" height="382px">
+
+   </div>
+</div>
+
+
+<div class="mlimg">
+<div>
+    <img src="mlimg1.png" alt="" class="mlimgg">
+</div>
+<div>
+    <img src="ml77.jpg" alt="" class="mlimgg">
+</div>
+<div>
+    <img src="mlim3.png" alt="" class="mlimgg">
+</div>
+<div>
+    <img src="mlim4.png" alt="" class="mlimgg">
+</div>
+<div>
+    <img src="mlim5.png" alt="" class="mlimgg">
+</div>
+<div>
+    <img src="mlim6.png" alt="" class="mlimgg">
+</div>
+</div>
+
+
+<div class="main_services">
+   
+<div class="services">
+
+
+<div class="up-serveices">
+
+
+<div>
+<i class="fa-solid fa-clock" style="font-size: 30px;"></i>
+<p><b>feature number one</b></p>
+<p style="color: rgb(124, 126, 127);"><small>Here is the Iocon ipsum passage <br>followed by Boparai's</small></p>
+   
+</svg>
+</div>
+
+<div>
+<i class="fa-solid fa-lock" style="font-size: 30px;"></i>
+<p><b>feature number two</b></p>
+<p style="color: rgb(124, 126, 127);"><small>Here is the Iocon ipsum passage <br>followed by Boparai's</small></p>
+   
+</svg>
+</div>
+
+
+<div>
+<i class="fa-solid fa-lightbulb" style="font-size: 30px;"></i>
+<p><b>feature number three</b></p>
+<p style="color: rgb(124, 126, 127);"><small>Here is the Iocon ipsum passage <br>followed by Boparai's</small></p>
+   
+</svg>
+</div>
+
+
+<div>
+<i class="fa-solid fa-heart" style="font-size: 30px;"></i>
+<p><b>feature number four</b></p>
+<p style="color: rgb(124, 126, 127);"><small>Here is the Iocon ipsum passage <br>followed by Boparai's</small></p>
+   
+</svg>
+</div>
+
+
+
+
+</div>
+
+</div>
+
+  </div>
+
+
+
+<div class="mvid">
+
+  <div>
+ <iframe class="classic-video" src="https://www.youtube.com/embed/LfnQ2vWmt60" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" width="700px" height="400px"
+      allowfullscreen></iframe>
+  </div>
+
+  <div class="txt" style="width: 300px; height: 400px;margin-left: 30px;">
+    <p style="font-family: 'Great Vibes', cursive; font-size: 30px;">More about</p>
+    <h1>Cicero's 1st-<br>century text</h1>
+    <p><small>The decade that brought us Star Trek<br> and Doctor Who also resurrected<br> Cicero—or at least what used to be<br> Cicero—in an attempt to make the<br> days before computerized design</small></p>
+  </div>
+
+</div>
+
+
+<div class="divvt2">
+
+
+<div style=" width: 400px;">
+<p style="font-family: 'Great Vibes', cursive; font-size: 29px; letter-spacing: 2px;">Amenities & benefints</p>
+<h3 style="font-size: 30px;">Choose the best option<br> for your vacation</h3>
+<p style="font-size: x-small;">The decade that brought us Star Trek and Doctor Who also<br> resurrected Cicero—or at least what used to be Cicero—in an attempt<br> to make the days before computerized design a little less painstaking.</p>
+
+  <div class="icon">
+
+
+    <div style="display: flex; border-bottom: 1px gray solid; ">
+    <div style="margin-top: 30px;  font-size: larger;">
+<i class="fa-solid fa-house-chimney"></i>
+   </div>
+<div>
+    <div style="padding-left: 30px;">
+<p style="font-size: 15px;"><b>Entire home</b></p>
+<p style="font-size: x-small;">You’ll have the tiny house to yourself.</p>
+    </div>
+</div>
+
+    </div>
+
+     <div style="display: flex; border-bottom: 1px gray solid;">
+    <div style="margin-top: 30px;  font-size: larger;">
+<i class="fa-solid fa-broom"></i>
+   </div>
+<div>
+    <div style="padding-left: 30px;">
+<p style="font-size: 15px;"><b>Enhanced Clean</b></p>
+<p style="font-size: x-small;">This host committed to Airbnb's 5-step enhanced cleaning process</p>
+    </div>
+</div>
+
+    </div>
+
+
+     <div style="display: flex;">
+    <div style="margin-top: 30px;  font-size: larger;">
+<i class="fa-solid fa-shield"></i>
+   </div>
+<div>
+    <div style="padding-left: 30px;">
+<p style="font-size: 15px;"><b>Self check-in</b></p>
+<p style="font-size: x-small;">Check yourself in with the lockbox.</p>
+    </div>
+</div>
+
+    </div>
+
+
+
+
+
+
+  </div>
+
+</div>
+
+<div>
+
+<img src="tree1.png" alt="" width="400px">
+
+</div>
+
+
+
+</div>
+
+
+
+
+ <div class="offer-container">
+    <div class="top-text">Great offer for you</div>
+    <div class="main-heading">The cost of a house for 3 days is $500</div>
+    <div class="description">
+      The decade that brought us Star Trek and Doctor Who also resurrected Cicero—or at least what used to be Cicero—in an attempt to make the days before computerized design.
+    </div>
+    <button class="button">Check availability</button>
+  </div>
+
+
+
+
+
+
+<footer class="footer">
+  <div class="container">
+    <h1 style="margin-left: 400px;">ASHBURY</h1>
+    
+    <div class="footer-column">
+      <a href="#">Home - Calendar</a>
+      <a href="#">Home - Search</a>
+      <a href="#">Home - Call to Action</a>
+      <a href="#">Home - Form</a>
+      <a href="#">Home - Slider</a>
+    </div>
+
+    <div class="footer-column">
+      <a href="our_place.html">Our Place</a>
+        <a href="Cart.html">Cart</a>
+        <a href="why_us.html">Why Us</a>
+        <a href="Booking Confirmation.html">Booking</a>
+        <a href="Checkout.html">Check out</a>
+    </div>
+
+    <div class="footer-column">
+      <a href="#">Home - Calendar</a>
+      <a href="#">Home - Search</a>
+      <a href="#">Home - Call to Action</a>
+      <a href="#">Home - Form</a>
+      <a href="#">Home - Slider</a>
+    </div>
+
+    <div class="footer-column">
+      <a href="Contact_Us.html">Contact Us</a>
+      <a href="#">contact@bellevue.com</a>
+      <a href="#">1-800-222-4545</a>
+      <a href="#">Saint Petersburg, Russia, 190068</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="left">
+      <a href="#">Get in Touch</a>
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+    <div class="right">
+      <span>Privacy & Policy</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="MasterCard">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" style="height: 18px;">
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+</html>
