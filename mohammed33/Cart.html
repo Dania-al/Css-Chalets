@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Pacifico&family=Satisfy&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+
+    
+<style>
+
+ body{
+     font-family: 'Montserrat', sans-serif;
+     margin: 0px;
+     padding: 0px;
+}
+
+.main_box{
+ gap: 200px;  
+}
+
+.nav1{
+    margin-top: 25px;
+}
+
+.nav1 > a{
+    padding: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+.bt1{
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: 100px;
+     cursor: pointer;
+     margin-top: 9px;
+     margin-left: -20px;
+     border: none;
+}
+
+.box1{
+    display: flex;
+    justify-content: center;
+}
+.bt2 {
+  background-color: transparent; 
+  border: 1px solid white;       
+  color: white;                 
+  padding: 10px 20px;
+  border-radius: 0px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s ease;
+  margin-left: 250px;
+}
+
+ .cart-container {
+      
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+      margin-bottom: 150px;
+      margin-top: 150px;
+    }
+
+    .cart-item {
+      background: #f4f4f4;
+      padding: 15px;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin-top: 10px;
+    }
+
+    .controls button {
+      padding: 5px 10px;
+      font-size: 14px;
+      cursor: pointer;
+      background-color: white;
+      color:#333;
+      
+    }
+
+    .controls span {
+      background: white;
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+    }
+
+    .date-info {
+      margin-top: 10px;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .info-icon {
+      background: black;
+      color: white;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+
+    .delete-btn {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      padding: 8px 20px;
+      border: 1px solid red;
+      color: red;
+      background: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .coupon-section {
+      margin-top: 30px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .coupon-section input {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .checkout-btn {
+      background: #1a1d18;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .cost {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    @media (max-width: 600px) {
+      .controls {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .coupon-section {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    }
+
+
+    .footer {
+  background-color: #121511;
+  color: #d2d2d2;
+  padding: 40px 20px 10px;
+  font-size: 14px;
+}
+
+.footer .container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.footer h1 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 50px;
+  margin-right: 370px;
+  font-size: 40px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-column h3 {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.footer-column a {
+  display: block;
+  color: #d2d2d2;
+  text-decoration: none;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid #2c2c2c;
+  margin-top: 20px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.footer-bottom .left,
+.footer-bottom .right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-bottom .left a {
+  margin-right: 15px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer-bottom .left i {
+  margin: 0 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.footer-bottom .right span {
+  margin-right: 15px;
+}
+
+.footer-bottom .right img {
+  height: 20px;
+  margin-left: 10px;
+  filter: grayscale(100%) brightness(200%);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin: 10px 0;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+
+
+</style>
+
+</head>
+
+
+
+<body>
+    
+<div class="main_box" style="display: flex;">
+<p style="font-size: 20px; font-weight: bolder; margin-left: 250px;">LOGOTYPE</p>
+
+<nav class="nav1">
+   <a href="Home_page.html">Home</a>
+    <a href="Chalets.html">Pages</a>
+    <a href="why_us.html">Futures</a>
+    <a href="Our_blog.html">Blog</a>
+</nav>
+<i style="font-size: 20px;margin-top: 20px;" class="fa-solid fa-cart-shopping"><sup style="background-color: red;border-radius: 50%; color: white; padding: 3px; " >2</sup></i>
+<button class="bt1">Book now</button>
+
+
+
+</div>
+
+<div class="box1">
+
+
+   <div class="our" style="width: 50%;height: 382px; background-color: #1F231C;color: white;">
+<h1 style="margin-top: 120px;font-size: 40px;margin-left: 250px;">Cart</h1>
+<p style="margin-left: 250px;"><small>Leave the city behind to explore the great outdoors at<br> our Outposts in the town of Catskill, New York.</small></p>
+   <button class="bt2" >Contact Us</button>
+</div>
+
+   <div class="b1im">
+<img src="treeho2.png" alt="" width="780px" height="382px">
+
+   </div>
+</div>
+
+  <div class="cart-container">
+    
+    <!-- First Item -->
+    <div class="cart-item">
+      <div class="item-header">
+        <div>Luxury Family Room</div>
+        <div class="cost">Cost: $90</div>
+      </div>
+      <div class="controls">
+        <button>-</button>
+        <span>3 nights</span>
+        <button>+</button>
+        <button>-</button>
+        <span>2 guests</span>
+        <button>+</button>
+      </div>
+      <div class="date-info">
+        <div class="info-icon">i</div>
+        <div>01/01/2021 - 03/01/2021</div>
+      </div>
+      <button class="delete-btn">Delete</button>
+    </div>
+
+    <!-- Second Item -->
+    <div class="cart-item">
+      <div class="item-header">
+        <div>Luxury Family Room</div>
+        <div class="cost">Cost: $90</div>
+      </div>
+      <div class="controls">
+        <button>-</button>
+        <span>3 nights</span>
+        <button>+</button>
+        <button>-</button>
+        <span>2 guests</span>
+        <button>+</button>
+      </div>
+      <div class="date-info">
+        <div class="info-icon">i</div>
+        <div>01/01/2021 - 03/01/2021</div>
+      </div>
+      <button class="delete-btn">Delete</button>
+    </div>
+
+    <!-- Coupon + Checkout -->
+    <div class="coupon-section">
+      <input type="text" placeholder="Coupon Code:">
+      <button class="checkout-btn">Go to checkout</button>
+    </div>
+
+  </div>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <h1 style="margin-left: 400px;">ASHBURY</h1>
+    
+    <div class="footer-column">
+      <a href="#">Home - Calendar</a>
+      <a href="#">Home - Search</a>
+      <a href="#">Home - Call to Action</a>
+      <a href="#">Home - Form</a>
+      <a href="#">Home - Slider</a>
+    </div>
+
+    <div class="footer-column">
+     <a href="our_place.html">Our Place</a>
+        <a href="Cart.html">Cart</a>
+        <a href="why_us.html">Why Us</a>
+        <a href="Booking Confirmation.html">Booking</a>
+        <a href="Checkout.html">Check out</a>
+    </div>
+
+    <div class="footer-column">
+      <a href="#">Home - Calendar</a>
+      <a href="#">Home - Search</a>
+      <a href="#">Home - Call to Action</a>
+      <a href="#">Home - Form</a>
+      <a href="#">Home - Slider</a>
+    </div>
+
+    <div class="footer-column">
+      <a href="Contact_Us.html">Contact Us</a>
+      <a href="#">contact@bellevue.com</a>
+      <a href="#">1-800-222-4545</a>
+      <a href="#">Saint Petersburg, Russia, 190068</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="left">
+      <a href="#">Get in Touch</a>
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+    <div class="right">
+      <span>Privacy & Policy</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="MasterCard">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" style="height: 18px;">
+    </div>
+  </div>
+</footer>
+
+
+</body>
+
+
+</html>

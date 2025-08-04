@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Pacifico&family=Satisfy&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+
+<style>
+
+ body{
+     font-family: 'Montserrat', sans-serif;
+     margin: 0px;
+     padding: 0px;
+}
+
+.main_box{
+ gap: 200px;  
+}
+
+.nav1{
+    margin-top: 25px;
+}
+
+.nav1 > a{
+    padding: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+.bt1{
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: 100px;
+     cursor: pointer;
+     margin-top: 9px;
+     margin-left: -20px;
+     border: none;
+}
+
+.box1{
+    display: flex;
+    justify-content: center;
+}
+.bt2 {
+  background-color: transparent; 
+  border: 1px solid white;       
+  color: white;                 
+  padding: 10px 20px;
+  border-radius: 0px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s ease;
+  margin-left: 250px;
+}
+
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 0px;
+      margin-top: 50px;
+      margin-left: 220px;
+    }
+
+    .checkout-container {
+      display: flex;
+      gap: 40px;
+      max-width: 1100px;
+      margin: auto;
+      margin-top: 150px;
+      margin-bottom: 150px;
+    }
+
+    .form-section {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-section input {
+      padding: 14px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 20px;
+    }
+
+    .summary-box {
+      flex: 1;
+      background-color: #1a1d18;
+      color: white;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      
+    }
+
+    .summary-box h2 {
+      display: flex;
+      justify-content: space-between;
+      font-size: 20px;
+      margin-bottom: 25px;
+      
+    }
+
+    .summary-box .item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      font-size: 14px;
+      margin-top: 50px;
+      border-bottom: 1px solid gray;
+    }
+
+    .summary-box .item strong {
+      font-weight: bold;
+
+    }
+
+    .checkout-btn {
+      margin-top: 20px;
+      background-color: white;
+      color: black;
+      border: none;
+      padding: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .checkout-container {
+        flex-direction: column;
+      }
+
+      .form-row {
+        flex-direction: column;
+      }
+    }
+
+
+.footer {
+  background-color: #121511;
+  color: #d2d2d2;
+  padding: 40px 20px 10px;
+  font-size: 14px;
+}
+
+.footer .container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.footer h1 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 50px;
+  margin-right: 370px;
+  font-size: 40px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-column h3 {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.footer-column a {
+  display: block;
+  color: #d2d2d2;
+  text-decoration: none;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid #2c2c2c;
+  margin-top: 20px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.footer-bottom .left,
+.footer-bottom .right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-bottom .left a {
+  margin-right: 15px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer-bottom .left i {
+  margin: 0 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.footer-bottom .right span {
+  margin-right: 15px;
+}
+
+.footer-bottom .right img {
+  height: 20px;
+  margin-left: 10px;
+  filter: grayscale(100%) brightness(200%);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin: 10px 0;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+
+</style>
+
+</head>
+
+<body>
+  
+    <div class="main_box" style="display: flex;">
+<p style="font-size: 20px; font-weight: bolder; margin-left: 250px;">LOGOTYPE</p>
+
+<nav class="nav1">
+   <a href="Home_page.html">Home</a>
+    <a href="Chalets.html">Pages</a>
+    <a href="why_us.html">Futures</a>
+    <a href="Our_blog.html">Blog</a>
+</nav>
+<i style="font-size: 20px;margin-top: 20px;" class="fa-solid fa-cart-shopping"><sup style="background-color: red;border-radius: 50%; color: white; padding: 3px; " >2</sup></i>
+<button class="bt1">Book now</button>
+
+
+
+</div>
+
+<hr>
+
+
+
+ <h1>Checkout</h1>
+
+  <div class="checkout-container">
+    <!-- Form Section -->
+    <div class="form-section">
+      <input type="text" placeholder="First Name">
+      <input type="text" placeholder="Last Name">
+      <div class="form-row">
+        <input type="text" placeholder="City">
+        <input type="text" placeholder="Country">
+      </div>
+      <div class="form-row">
+        <input type="text" placeholder="Phone">
+        <input type="email" placeholder="Email Address">
+      </div>
+    </div>
+
+    <!-- Summary Section -->
+    <div class="summary-box">
+      <div>
+        <h2>
+          <span style="margin-bottom: 30px;margin-top: -10px;">Total Price</span>
+          <span style="margin-bottom: 30px;margin-top: -10px;">346$</span>
+        </h2>
+        <div class="item">
+          <span>Subtotal</span>
+          <span>270$</span>
+        </div>
+        <div class="item">
+          <span><strong>VAT (included)</strong></span>
+          <span>36$</span>
+        </div>
+        <div class="item">
+          <span>Shipping</span>
+          <span>40$</span>
+        </div>
+      </div>
+      <button class="checkout-btn">Go to checkout</button>
+    </div>
+  </div>
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="container">
+    <h1 style="margin-left: 400px;">ASHBURY</h1>
+    
+    <div class="footer-column">
+      <a href="#">Home - Calendar</a>
+      <a href="#">Home - Search</a>
+      <a href="#">Home - Call to Action</a>
+      <a href="#">Home - Form</a>
+      <a href="#">Home - Slider</a>
+    </div>
+
+    <div class="footer-column">
+      <a href="our_place.html">Our Place</a>
+        <a href="Cart.html">Cart</a>
+        <a href="why_us.html">Why Us</a>
+        <a href="Booking Confirmation.html">Booking</a>
+        <a href="Checkout.html">Check out</a>
+    </div>
+
+    <div class="footer-column">
+      <a href="#">Home - Calendar</a>
+      <a href="#">Home - Search</a>
+      <a href="#">Home - Call to Action</a>
+      <a href="#">Home - Form</a>
+      <a href="#">Home - Slider</a>
+    </div>
+
+    <div class="footer-column">
+      <a href="Contact_Us.html">Contact Us</a>
+      <a href="#">contact@bellevue.com</a>
+      <a href="#">1-800-222-4545</a>
+      <a href="#">Saint Petersburg, Russia, 190068</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="left">
+      <a href="#">Get in Touch</a>
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+    <div class="right">
+      <span>Privacy & Policy</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="MasterCard">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" style="height: 18px;">
+    </div>
+  </div>
+</footer>
+
+
+</body>
+
+
+
+</html>
