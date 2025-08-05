@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Contact Header */
+.contact-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1d1d1d;
+  color: white;
+  padding: 40px 60px;
+}
+
+.contact-text {
+  flex: 1;
+}
+
+.contact-text h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.contact-text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.contact-text button {
+  padding: 10px 20px;
+  background-color: white;
+  color: #1d1d1d;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-image img {
+  width: 400px;
+  border-radius: 8px;
+}
+
+/* Contact Options */
+.contact-options {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.option h4 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.option p {
+  margin: 5px 0;
+}
+
+/* Map */
+.map-section {
+  margin: 0;
+  padding: 0;
+}
+
+/* Offer Section */
+.offer {
+  background-color: #1d1d1d;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.offer h3 {
+  font-family: cursive;
+  margin-bottom: 10px;
+}
+
+.offer p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.offer button {
+  padding: 12px 25px;
+  background-color: white;
+  color: #1d1d1d;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Leave Request */
+.leave-request {
+  display: flex;
+  justify-content: space-around;
+  padding: 60px 30px;
+}
+
+.leave-request .left {
+  flex: 1;
+  max-width: 500px;
+}
+
+.leave-request .left h4 {
+  font-style: italic;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.leave-request .left h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.leave-request .form-box {
+  background-color: #1d1d1d;
+  color: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 300px;
+}
+
+.leave-request .form-box input,
+.leave-request .form-box textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.leave-request .form-box button {
+  padding: 10px 20px;
+  background-color: white;
+  color: #1d1d1d;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+/* Welcome */
+.welcome {
+  display: flex;
+  padding: 60px 30px;
+  align-items: center;
+}
+
+.welcome img {
+  width: 300px;
+  border-radius: 8px;
+  margin-right: 30px;
+}
+
+.welcome-text h4 {
+  font-style: italic;
+  color: gray;
+}
+
+.welcome-text h2 {
+  font-size: 26px;
+  margin: 10px 0;
+}
+
+.welcome-text p {
+  font-size: 16px;
+  line-height: 1.5;
+}

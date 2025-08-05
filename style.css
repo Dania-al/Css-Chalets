@@ -1,0 +1,350 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ------------------ Page 1 ------------------ */
+.page1 {
+  position: relative;
+  color: white;
+  background-image: url(images/h3.PNG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  z-index: 0;
+}
+
+.page1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 150px;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+  z-index: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #f0c040;
+}
+
+.btn1 button {
+  padding: 8px 16px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn1 button:hover {
+  background-color: #e0e0e0;
+}
+
+.content {
+  margin: 180px;
+  padding: 20px;
+  color: white;
+}
+
+.p1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 28px;
+}
+
+.content h1 {
+  font-size: 60px;
+  color: white;
+}
+
+/* ------------------ Page 2 ------------------ */
+.page2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+  padding: 100px 40px;
+  gap: 40px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.page2-img {
+  width: 400px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.text-content {
+  max-width: 500px;
+}
+
+.text-content h1 {
+  margin: 10px 0;
+}
+
+.p2 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 22px;
+  color: black;
+  margin-left: 80px;
+  margin-bottom: 20px;
+}
+
+/* ------------------ Page 3 ------------------ */
+.page3 {
+  margin: 20px 0;
+  padding: 20px;
+  color: black;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.img1 {
+  margin-top: 80px;
+  display: flex;
+  gap: 20px;
+}
+
+/* ------------------ Page 4 ------------------ */
+.page4 {
+  padding: 40px;
+  background-color: white;
+  color: black;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page4-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.page4-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.page4-image img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin-top: 60px;
+}
+
+.page4 h1 {
+  font-size: 40px;
+}
+
+.page4-bottom {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+}
+
+.feature i {
+  font-size: 20px;
+  color: #333;
+}
+
+/* ------------------ Page 5 ------------------ */
+.page5-top {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.page5 {
+  width: 100%;
+  padding: 20px;
+  color: black;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.grid-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(2, 150px);
+  gap: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item {
+  background-color: #f4f3f3;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.grid-item:hover {
+  background-color: #eeeeee;
+  transform: scale(1.05);
+}
+
+.grid-item i {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.grid-item p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.page5-bottom {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.page5-bottom img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ------------------ Footer ------------------ */
+.footer {
+ 
+  margin-top: 50px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 40px 20px 20px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 20px;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #ccc;
+}
+
+.social-icons a {
+  color: white;
+  margin-right: 10px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ccc;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #bbb;
+}

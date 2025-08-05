@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation - LOGOTYPE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .cart-btn {
+            background: #333;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 40px;
+        }
+
+        .page-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .booking-info {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .booking-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .accommodation-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .accommodation-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .accommodation-details {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .room-amenities {
+            display: flex;
+            gap: 15px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Additional Services */
+        .service-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .service-item:last-child {
+            border-bottom: none;
+        }
+
+        .service-name {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .service-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .quantity-btn {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ddd;
+            background: white;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .quantity-btn:hover {
+            background: #f5f5f5;
+        }
+
+        /* Price Breakdown */
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+
+        .price-row.total {
+            font-weight: 600;
+            font-size: 16px;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 10px;
+            padding-top: 15px;
+        }
+
+        /* Form Fields */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        /* Payment Methods */
+        .payment-method {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+        }
+
+        .payment-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .payment-description {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        /* Footer Buttons */
+        .footer-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .total-price {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .book-btn {
+            background: #333;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .book-btn:hover {
+            background: #555;
+        }
+
+        .icon {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">LOGOTYPE</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">TRIPS</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">BLOG</a></li>
+                </ul>
+            </nav>
+            <button class="cart-btn">🛒 Cart</button>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h1 class="page-title">Booking Confirmation</h1>
+
+            <div class="booking-info">
+                <span>📅 Guests: 2</span>
+                <span>📅 Events: Pink Flash Club</span>
+                <span>📅 Check-out: 29/03/23</span>
+                <span>📅 Check-in: 29/03/23</span>
+                <span>📅 Full 3 Nights</span>
+            </div>
+
+            <!-- Accommodation -->
+            <section class="section">
+                <h2 class="section-title">ACCOMMODATION #1</h2>
+                <div class="accommodation-card">
+                    <div class="accommodation-title">Premium Double Room</div>
+                    <div class="accommodation-details">
+                        Experience luxury at its finest in our premium double room with stunning city views and modern amenities.
+                    </div>
+                    <div class="room-amenities">
+                        <span>🏠 Room</span>
+                        <span>🛏️ Bed</span>
+                        <span>🚿 Shower</span>
+                        <span>📺 TV</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Additional Services -->
+            <section class="section">
+                <h2 class="section-title">CHOOSE ADDITIONAL SERVICES</h2>
+                
+                <div class="service-item">
+                    <span class="service-name">Hot Toweled Club | Deluxe</span>
+                    <div class="service-controls">
+                        <div class="quantity-control">
+                            <button class="quantity-btn">-</button>
+                            <span>1</span>
+                            <button class="quantity-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <span class="service-name">Shuttle and laundry for 220 | Deluxe</span>
+                    <div class="service-controls">
+                        <div class="quantity-control">
+                            <button class="quantity-btn">-</button>
+                            <span>1</span>
+                            <button class="quantity-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <span class="service-name">High-end suite CLUB | Delux for</span>
+                    <div class="service-controls">
+                        <div class="quantity-control">
+                            <button class="quantity-btn">-</button>
+                            <span>1</span>
+                            <button class="quantity-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <span style="font-size: 14px; color: #666;">Coupon Code</span>
+                </div>
+            </section>
+
+            <!-- Price Breakdown -->
+            <section class="section">
+                <h2 class="section-title">PRICE BREAKDOWN</h2>
+                <div class="price-row">
+                    <span>All 3 Nights</span>
+                    <span>$349</span>
+                </div>
+                <div class="price-row">
+                    <span>Reg. travel price</span>
+                    <span>$1</span>
+                </div>
+                <div class="price-row">
+                    <span>Club fee</span>
+                    <span>$1</span>
+                </div>
+                <div class="price-row">
+                    <span>Nights</span>
+                    <span>$1</span>
+                </div>
+                <div class="price-row">
+                    <span>Dinner</span>
+                    <span>$60.49</span>
+                </div>
+                <div class="price-row">
+                    <span>Membership (34 days)</span>
+                    <span>$1</span>
+                </div>
+                <div class="price-row">
+                    <span>Extra bedroom</span>
+                    <span>$349</span>
+                </div>
+                <div class="price-row">
+                    <span>Accommodation subtotal</span>
+                    <span>$349</span>
+                </div>
+                <div class="price-row">
+                    <span>Subtotal</span>
+                    <span>$349</span>
+                </div>
+                <div class="price-row total">
+                    <span>Total</span>
+                    <span>$349</span>
+                </div>
+            </section>
+
+            <!-- Your Information -->
+            <section class="section">
+                <h2 class="section-title">YOUR INFORMATION</h2>
+                <div class="form-group">
+                    <label class="form-label">First Name</label>
+                    <input type="text" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Last Name</label>
+                    <input type="text" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Phone</label>
+                    <input type="tel" class="form-input" placeholder="Enter phone number">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input">
+                </div>
+            </section>
+
+            <!-- Payment Method -->
+            <section class="section">
+                <h2 class="section-title">PAYMENT METHOD</h2>
+                
+                <div class="payment-method">
+                    <div class="payment-title">Credit Card</div>
+                    <div class="payment-description">Visa, MasterCard, American Express & Discover accepted. *Some cards may require additional authentication.</div>
+                </div>
+
+                <div class="payment-method">
+                    <div class="payment-title">Pay on Arrival</div>
+                    <div class="payment-description">Book now, pay when you arrive at the location.</div>
+                </div>
+
+                <div class="payment-method">
+                    <div class="payment-title">PayPal</div>
+                    <div class="payment-description">Pay quickly & securely with PayPal. Link your credit card, debit card or bank account for faster checkout.</div>
+                </div>
+
+                <div class="payment-method">
+                    <div class="payment-title">Afterpay</div>
+                    <div class="payment-description">Buy now and pay later with 4 interest-free installments when you pay every 2 weeks. Must be 18+ and meet eligibility criteria.</div>
+                </div>
+
+                <div class="payment-method">
+                    <div class="payment-title">Pay by Card Direct</div>
+                    <div class="payment-description">Pay securely using your card details. All transactions are encrypted and processed through secure payment gateways.</div>
+                </div>
+
+                <div class="payment-method">
+                    <div class="payment-title">Pay by Full Deposit</div>
+                    <div class="payment-description">Secure your booking with a full payment deposit. This ensures your reservation is confirmed immediately.</div>
+                </div>
+
+                <div class="payment-method">
+                    <div class="payment-title">Bitcoin</div>
+                    <div class="payment-description">Pay with Bitcoin for a secure, decentralized payment experience. Bitcoin transactions are processed quickly with low fees.</div>
+                </div>
+            </section>
+
+            <!-- Footer Actions -->
+            <div class="footer-actions">
+                <div class="total-price">Total: $349</div>
+                <button class="book-btn">Book Now</button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
