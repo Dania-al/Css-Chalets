@@ -1,3 +1,4 @@
+/* ------------------ Global Styles ------------------ */
 * {
   padding: 0;
   margin: 0;
@@ -286,7 +287,6 @@ html, body {
 
 /* ------------------ Footer ------------------ */
 .footer {
- 
   margin-top: 50px;
   width: 100%;
   background-color: black;
@@ -347,4 +347,103 @@ html, body {
   margin-top: 20px;
   font-size: 14px;
   color: #bbb;
+}
+
+/* ------------------ Responsive Styles ------------------ */
+@media (max-width: 992px) {
+  .header {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .nav {
+    margin-top: 10px;
+  }
+
+  .content {
+    margin: 100px 20px;
+    text-align: center;
+  }
+
+  .content h1 {
+    font-size: 40px;
+  }
+
+  .page2 {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .p2 {
+    margin-left: 0;
+  }
+
+  .text-content {
+    max-width: 100%;
+  }
+
+  .page4-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page4-text {
+    text-align: center;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 16px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 15px;
+  }
+
+  .nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .btn1 button {
+    width: 100%;
+  }
+
+  .content h1 {
+    font-size: 32px;
+  }
+
+  .page2-img {
+    width: 100%;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .page4-image img {
+    max-width: 100%;
+  }
+
+  .footer {
+    padding: 30px 10px;
+  }
+
+  .footer-section {
+    min-width: 100%;
+  }
 }

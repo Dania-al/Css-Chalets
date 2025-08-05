@@ -1,6 +1,7 @@
-*{
-    padding: 0px;
-    margin: 0px;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Added for better box sizing */
 }
 html, body {
   width: 100%;
@@ -10,7 +11,7 @@ html, body {
 .page1 {
   position: relative;
   color: black;
- background-color: white;
+  background-color: white;
   min-height: 100vh;
   z-index: 0;
 }
@@ -22,7 +23,6 @@ html, body {
   left: 0;
   height: 150px;
   width: 100%;
- 
   z-index: 1;
 }
 
@@ -33,13 +33,14 @@ html, body {
   padding: 20px 60px;
   position: relative;
   z-index: 2;
+  flex-wrap: wrap; /* Added for better small screen support */
 }
 
 .logo {
   font-size: 24px;
   font-weight: bold;
   color: black;
-   text-decoration: none;
+  text-decoration: none;
 }
 
 .nav a {
@@ -69,11 +70,7 @@ html, body {
   background-color: #464646;
 }
 
-
-
-
 .footer {
- 
   margin-top: 50px;
   width: 100%;
   background-color: black;
@@ -136,26 +133,24 @@ html, body {
   color: #bbb;
 }
 
-.feature-item i{
-    size: 30px;
+.feature-item i {
+    font-size: 30px; /* corrected from 'size' */
     color: white;
-    padding: 20ox;
+    padding: 20px; /* corrected typo from '20ox' */
 }
 
-
 .full-width-image {
-  width: 100vw;          /* 100% of the viewport width */
+  width: 100vw; /* 100% of viewport width */
   margin: 0;
   padding: 0;
-  overflow: hidden;      /* Prevent scrollbars if image slightly overflows */
+  overflow: hidden; /* prevent scrollbars if image slightly overflows */
 }
 
 .full-width-image img {
   width: 100%;
   height: auto;
-  display: block;        /* Removes extra space below image */
+  display: block; /* removes extra space below image */
 }
-
 
 .about-section {
   padding: 80px 40px;
@@ -168,10 +163,11 @@ html, body {
   gap: 60px;
   max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: wrap; /* added for responsiveness */
 }
 
 .about-image {
-  flex: 1;
+  flex: 1 1 400px; /* flexible width with minimum */
 }
 
 .about-image img {
@@ -182,7 +178,7 @@ html, body {
 }
 
 .about-content {
-  flex: 1;
+  flex: 1 1 400px;
 }
 
 .about-label {
@@ -214,10 +210,11 @@ html, body {
   gap: 60px;
   max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: wrap; /* added for responsiveness */
 }
 
 .amenities-content {
-  flex: 1;
+  flex: 1 1 400px;
 }
 
 .amenities-label {
@@ -267,7 +264,7 @@ html, body {
 }
 
 .amenities-image {
-  flex: 1;
+  flex: 1 1 400px;
 }
 
 .amenities-image img {
@@ -276,7 +273,37 @@ html, body {
   object-fit: cover;
   border-radius: 15px;
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-container,
+  .amenities-container {
+    gap: 30px;
+  }
+  .about-image,
+  .about-content,
+  .amenities-content,
+  .amenities-image {
+    flex: 1 1 100%;
+    height: auto;
+  }
+  .about-image img,
+  .amenities-image img {
+    height: auto;
+  }
+}
+
 @media (max-width: 768px) {
+  .page1-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .image-column img {
+    width: 100%;
+    max-width: 400px;
+  }
+  
   .gallery-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, 250px);
@@ -289,16 +316,6 @@ html, body {
   .about-container,
   .amenities-container {
     flex-direction: column;
-  }
-  
-  .page1-content {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .image-column img {
-    width: 100%;
-    max-width: 400px;
   }
 }
 
@@ -323,31 +340,47 @@ html, body {
     margin-top: 15px;
     text-align: center;
   }
+  
+  .about-image img,
+  .amenities-image img {
+    height: auto;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .img1 {
   margin-top: 80px;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap; /* added so items wrap on small screens */
 }
 
-.page2{
-    margin-top: 50px;
-    margin: 100;
-    padding: 20px;
-    color: black;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+.page2 {
+  margin-top: 50px;
+  padding: 20px;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap; /* added for small screen flexibility */
 }
 
-.page3{
-    margin-top: 50px;
-    margin: 500;
-    padding: 30px;
-    color: black;
-    justify-content: center;
-    align-items: center;
-    display: block;
-   
+.page3 {
+  margin-top: 50px;
+  padding: 30px;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  display: block;
+}
+
+/* Optional: Fix margins that were excessive */
+.page2, .page3 {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
 }
